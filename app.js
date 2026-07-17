@@ -233,7 +233,7 @@ function renderPage() {
         const li = document.createElement('li');
         li.className = 'video-item';
         
-        const videoUrl = `https://youtube.com{video.videoId}`;
+        const videoUrl = 'https://youtube.com' + video.videoId;
         
         const thumbDiv = document.createElement('div');
         thumbDiv.className = 'video-thumb';
