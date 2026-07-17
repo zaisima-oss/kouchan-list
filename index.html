@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTubeチャンネル動画一覧ツール</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>window.gtranslateSettings = {"default_language":"ja","detect_browser_language":true,"languages":["ja","zh-TW","fr","it","es","de","ru","mn","uk","pt"],"globe_color":"#66aaff","wrapper_selector":".gtranslate_wrapper","horizontal_position":"right","vertical_position":"top"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/globe.js" defer></script>
+
+</head>
+<body>
+<div class="gtranslate_wrapper"></div>
+    <div class="container">
+        <header>
+            <h1>DeさんのYouTubeチャンネル動画一覧</h1>
+            <p>チャンネルの全動画をタイトル順に表示します。</p>
+        </header>
+        <section id="searchSection" class="search-section hidden">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="タイトルからキーワードで検索...">
+                <button id="searchBtn" class="primary-btn search-btn">検索</button>
+            </div>
+        </section>
+
+        <!-- 👇 ここから追加：並び替えボタンのエリア -->
+        <section id="sortSection" class="search-section hidden" style="margin-top: -1rem; text-align: right;">
+            <span style="font-size: 0.9rem; color: var(--text-muted); margin-right: 0.5rem;">並び替え:</span>
+            <button id="sortDateBtn" class="page-btn" style="background-color: var(--primary-color); color: white;">日付順（新しい順）</button>
+            <button id="sortTitleBtn" class="page-btn">タイトル順</button>
+        </section>
+        <!-- 👆 ここまで追加 -->
+
+
+        <div id="loader" class="loader hidden">
+            <div class="spinner"></div>
+            <p id="loaderText">動画を取得中...</p>
+        </div>
+        <section id="resultsSection" class="hidden">
+            <div class="results-header">
+                <h2 id="totalCountDisplay"></h2>
+                <div class="pagination-controls" id="topPagination"></div>
+            </div>
+            <div class="video-list-container">
+                <ul id="videoList" class="video-list"></ul>
+            </div>
+            <div class="results-footer">
+                <div class="pagination-controls" id="bottomPagination"></div>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
