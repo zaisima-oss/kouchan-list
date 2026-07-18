@@ -6,7 +6,7 @@
     <title>YouTubeチャンネル動画一覧ツール</title>
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts for typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -20,16 +20,12 @@
                 <button id="searchBtn" class="primary-btn search-btn">検索</button>
             </div>
         </section>
-
-        <!-- 👇 ここから追加：並び替えボタンのエリア -->
+        <!-- 並び替えボタンのエリア -->
         <section id="sortSection" class="search-section hidden" style="margin-top: -1rem; text-align: right;">
             <span style="font-size: 0.9rem; color: var(--text-muted); margin-right: 0.5rem;">並び替え:</span>
             <button id="sortDateBtn" class="page-btn" style="background-color: var(--primary-color); color: white;">日付順（新しい順）</button>
             <button id="sortTitleBtn" class="page-btn">タイトル順</button>
         </section>
-        <!-- 👆 ここまで追加 -->
-
-
         <div id="loader" class="loader hidden">
             <div class="spinner"></div>
             <p id="loaderText">動画を取得中...</p>
