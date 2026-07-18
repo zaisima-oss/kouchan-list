@@ -233,6 +233,7 @@ function renderPage() {
         const li = document.createElement('li');
         li.className = 'video-item';
         
+        // 【修正箇所】シンプルな足し算で確実なURLを作ります
         const videoUrl = 'https://youtube.com' + video.videoId;
         
         const thumbDiv = document.createElement('div');
@@ -255,7 +256,6 @@ function renderPage() {
         titleLink.rel = 'noopener noreferrer';
         titleLink.textContent = video.title;
         
-        // 公開日のプチ表示
         const dateP = document.createElement('p');
         dateP.style.fontSize = '0.8rem';
         dateP.style.color = 'var(--text-muted)';
@@ -271,6 +271,7 @@ function renderPage() {
     
     renderPaginationControls(totalPages);
 }
+
 
 function renderPaginationControls(totalPages) {
     const controlsHtml = `
