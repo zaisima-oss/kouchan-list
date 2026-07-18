@@ -234,8 +234,7 @@ function renderPage() {
         li.className = 'video-item';
         
         // 【修正箇所】シンプルな足し算で確実なURLを作ります
-        const videoUrl = 'https://youtube.com' + video.videoId;
-        
+        const videoUrl = 'https://youtu.be' + video.videoId;
         const thumbDiv = document.createElement('div');
         thumbDiv.className = 'video-thumb';
         if (video.thumbnail) {
